@@ -74,7 +74,6 @@ namespace API.Specs
             public string show { get; set; }
             public string email { get; set; }
             public Presence presence { get; set; }
-
             public string mention_name { get; set; }
         }
 

@@ -42,6 +42,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtHipChatToken = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbUnknownLync = new System.Windows.Forms.ComboBox();
+            this.cbCannotInterruptLync = new System.Windows.Forms.ComboBox();
+            this.cbCanInterruptLync = new System.Windows.Forms.ComboBox();
+            this.cbNoActivityLync = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbUnknown = new System.Windows.Forms.ComboBox();
             this.txtUnknownMsg = new System.Windows.Forms.TextBox();
@@ -66,10 +72,13 @@
             this.every15MinutesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuExitItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkEnableLync = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.contextMenuStrip.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -79,7 +88,7 @@
             this.groupBox1.Controls.Add(this.txtCodealikeUser);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(379, 51);
+            this.groupBox1.Size = new System.Drawing.Size(528, 51);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Codealike Settings";
@@ -112,9 +121,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(311, 350);
+            this.btnSave.Location = new System.Drawing.Point(371, 398);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(121, 23);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -178,6 +187,12 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.cbUnknownLync);
+            this.groupBox3.Controls.Add(this.cbCannotInterruptLync);
+            this.groupBox3.Controls.Add(this.cbCanInterruptLync);
+            this.groupBox3.Controls.Add(this.cbNoActivityLync);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.cbUnknown);
             this.groupBox3.Controls.Add(this.txtUnknownMsg);
@@ -192,15 +207,69 @@
             this.groupBox3.Controls.Add(this.txtNoActivityMsg);
             this.groupBox3.Location = new System.Drawing.Point(13, 163);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(379, 134);
+            this.groupBox3.Size = new System.Drawing.Size(528, 174);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Codealike Status Mapping";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(269, 36);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Lync";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(139, 36);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "HipChat";
+            // 
+            // cbUnknownLync
+            // 
+            this.cbUnknownLync.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUnknownLync.FormattingEnabled = true;
+            this.cbUnknownLync.Location = new System.Drawing.Point(235, 52);
+            this.cbUnknownLync.Name = "cbUnknownLync";
+            this.cbUnknownLync.Size = new System.Drawing.Size(121, 21);
+            this.cbUnknownLync.TabIndex = 12;
+            // 
+            // cbCannotInterruptLync
+            // 
+            this.cbCannotInterruptLync.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCannotInterruptLync.FormattingEnabled = true;
+            this.cbCannotInterruptLync.Location = new System.Drawing.Point(235, 133);
+            this.cbCannotInterruptLync.Name = "cbCannotInterruptLync";
+            this.cbCannotInterruptLync.Size = new System.Drawing.Size(121, 21);
+            this.cbCannotInterruptLync.TabIndex = 15;
+            // 
+            // cbCanInterruptLync
+            // 
+            this.cbCanInterruptLync.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCanInterruptLync.FormattingEnabled = true;
+            this.cbCanInterruptLync.Location = new System.Drawing.Point(235, 106);
+            this.cbCanInterruptLync.Name = "cbCanInterruptLync";
+            this.cbCanInterruptLync.Size = new System.Drawing.Size(121, 21);
+            this.cbCanInterruptLync.TabIndex = 14;
+            // 
+            // cbNoActivityLync
+            // 
+            this.cbNoActivityLync.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNoActivityLync.FormattingEnabled = true;
+            this.cbNoActivityLync.Location = new System.Drawing.Point(235, 79);
+            this.cbNoActivityLync.Name = "cbNoActivityLync";
+            this.cbNoActivityLync.Size = new System.Drawing.Size(121, 21);
+            this.cbNoActivityLync.TabIndex = 13;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 22);
+            this.label9.Location = new System.Drawing.Point(6, 57);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 13);
             this.label9.TabIndex = 11;
@@ -210,14 +279,14 @@
             // 
             this.cbUnknown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUnknown.FormattingEnabled = true;
-            this.cbUnknown.Location = new System.Drawing.Point(108, 17);
+            this.cbUnknown.Location = new System.Drawing.Point(108, 52);
             this.cbUnknown.Name = "cbUnknown";
             this.cbUnknown.Size = new System.Drawing.Size(121, 21);
             this.cbUnknown.TabIndex = 0;
             // 
             // txtUnknownMsg
             // 
-            this.txtUnknownMsg.Location = new System.Drawing.Point(235, 19);
+            this.txtUnknownMsg.Location = new System.Drawing.Point(362, 53);
             this.txtUnknownMsg.Name = "txtUnknownMsg";
             this.txtUnknownMsg.Size = new System.Drawing.Size(138, 20);
             this.txtUnknownMsg.TabIndex = 1;
@@ -225,7 +294,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 103);
+            this.label6.Location = new System.Drawing.Point(6, 138);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 13);
             this.label6.TabIndex = 8;
@@ -235,14 +304,14 @@
             // 
             this.cbCannotInterrupt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCannotInterrupt.FormattingEnabled = true;
-            this.cbCannotInterrupt.Location = new System.Drawing.Point(108, 98);
+            this.cbCannotInterrupt.Location = new System.Drawing.Point(108, 133);
             this.cbCannotInterrupt.Name = "cbCannotInterrupt";
             this.cbCannotInterrupt.Size = new System.Drawing.Size(121, 21);
             this.cbCannotInterrupt.TabIndex = 6;
             // 
             // txtCannotInterruptMsg
             // 
-            this.txtCannotInterruptMsg.Location = new System.Drawing.Point(235, 100);
+            this.txtCannotInterruptMsg.Location = new System.Drawing.Point(362, 134);
             this.txtCannotInterruptMsg.Name = "txtCannotInterruptMsg";
             this.txtCannotInterruptMsg.Size = new System.Drawing.Size(138, 20);
             this.txtCannotInterruptMsg.TabIndex = 7;
@@ -250,7 +319,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 76);
+            this.label5.Location = new System.Drawing.Point(6, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 5;
@@ -260,14 +329,14 @@
             // 
             this.cbCanInterrupt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCanInterrupt.FormattingEnabled = true;
-            this.cbCanInterrupt.Location = new System.Drawing.Point(108, 71);
+            this.cbCanInterrupt.Location = new System.Drawing.Point(108, 106);
             this.cbCanInterrupt.Name = "cbCanInterrupt";
             this.cbCanInterrupt.Size = new System.Drawing.Size(121, 21);
             this.cbCanInterrupt.TabIndex = 4;
             // 
             // txtCanInterruptMsg
             // 
-            this.txtCanInterruptMsg.Location = new System.Drawing.Point(235, 73);
+            this.txtCanInterruptMsg.Location = new System.Drawing.Point(362, 107);
             this.txtCanInterruptMsg.Name = "txtCanInterruptMsg";
             this.txtCanInterruptMsg.Size = new System.Drawing.Size(138, 20);
             this.txtCanInterruptMsg.TabIndex = 5;
@@ -275,7 +344,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 49);
+            this.label4.Location = new System.Drawing.Point(6, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 2;
@@ -285,14 +354,14 @@
             // 
             this.cbNoActivity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNoActivity.FormattingEnabled = true;
-            this.cbNoActivity.Location = new System.Drawing.Point(108, 44);
+            this.cbNoActivity.Location = new System.Drawing.Point(108, 79);
             this.cbNoActivity.Name = "cbNoActivity";
             this.cbNoActivity.Size = new System.Drawing.Size(121, 21);
             this.cbNoActivity.TabIndex = 2;
             // 
             // txtNoActivityMsg
             // 
-            this.txtNoActivityMsg.Location = new System.Drawing.Point(235, 46);
+            this.txtNoActivityMsg.Location = new System.Drawing.Point(362, 80);
             this.txtNoActivityMsg.Name = "txtNoActivityMsg";
             this.txtNoActivityMsg.Size = new System.Drawing.Size(138, 20);
             this.txtNoActivityMsg.TabIndex = 3;
@@ -300,7 +369,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 306);
+            this.label7.Location = new System.Drawing.Point(269, 374);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 4;
@@ -314,7 +383,7 @@
             "5",
             "10",
             "15"});
-            this.cbUpdateInterval.Location = new System.Drawing.Point(121, 303);
+            this.cbUpdateInterval.Location = new System.Drawing.Point(371, 371);
             this.cbUpdateInterval.Name = "cbUpdateInterval";
             this.cbUpdateInterval.Size = new System.Drawing.Size(121, 21);
             this.cbUpdateInterval.TabIndex = 4;
@@ -322,7 +391,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(248, 306);
+            this.label8.Location = new System.Drawing.Point(498, 374);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 6;
@@ -400,11 +469,32 @@
             this.toolStripMenuExitItem.Text = "Exit";
             this.toolStripMenuExitItem.Click += new System.EventHandler(this.toolStripMenuExitItem_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.chkEnableLync);
+            this.groupBox4.Location = new System.Drawing.Point(398, 72);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(143, 85);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Lync Settings";
+            // 
+            // chkEnableLync
+            // 
+            this.chkEnableLync.AutoSize = true;
+            this.chkEnableLync.Location = new System.Drawing.Point(15, 36);
+            this.chkEnableLync.Name = "chkEnableLync";
+            this.chkEnableLync.Size = new System.Drawing.Size(110, 17);
+            this.chkEnableLync.TabIndex = 0;
+            this.chkEnableLync.Text = "Enable Lync sync";
+            this.chkEnableLync.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 385);
+            this.ClientSize = new System.Drawing.Size(553, 437);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbUpdateInterval);
             this.Controls.Add(this.label7);
@@ -422,6 +512,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.contextMenuStrip.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,6 +557,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbUnknown;
         private System.Windows.Forms.TextBox txtUnknownMsg;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbUnknownLync;
+        private System.Windows.Forms.ComboBox cbCannotInterruptLync;
+        private System.Windows.Forms.ComboBox cbCanInterruptLync;
+        private System.Windows.Forms.ComboBox cbNoActivityLync;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.CheckBox chkEnableLync;
     }
 }
 

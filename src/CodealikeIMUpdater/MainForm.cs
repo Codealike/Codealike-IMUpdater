@@ -19,6 +19,7 @@ namespace CodealikeIMUpdater
         public event Action<int> SetUpdateInterval;
 
         private static string[] hipChatStatus = new string[] { "Chat", "Away", "DND" };
+        private static string[] lyncStatus = new string[] { "Free", "Busy", "DoNotDisturb", "Away", "Offline" };
 
         public MainForm()
         {
@@ -29,12 +30,22 @@ namespace CodealikeIMUpdater
             cbCannotInterrupt.Items.AddRange(hipChatStatus);
             cbNoActivity.Items.AddRange(hipChatStatus);
 
+            cbUnknownLync.Items.AddRange(lyncStatus);
+            cbCanInterruptLync.Items.AddRange(lyncStatus);
+            cbCannotInterruptLync.Items.AddRange(lyncStatus);
+            cbNoActivityLync.Items.AddRange(lyncStatus);
+
             cbUpdateInterval.SelectedIndex = 0;
 
             cbUnknown.SelectedIndex = 0;
             cbCanInterrupt.SelectedIndex = 0;
             cbCannotInterrupt.SelectedIndex = 2;
             cbNoActivity.SelectedIndex = 0;
+
+            cbUnknownLync.SelectedIndex = 0;
+            cbCanInterruptLync.SelectedIndex = 1;
+            cbCannotInterruptLync.SelectedIndex = 2;
+            cbNoActivityLync.SelectedIndex = 0;
 
             txtCannotInterruptMsg.Text = "On fire!";
             txtCanInterruptMsg.Text = "Trying to focus";
